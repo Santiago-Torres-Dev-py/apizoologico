@@ -6,7 +6,7 @@ const Animal = require("../models/Animal");
 router.post("/", async (req, res) => { 
     try { const animal = new Animal(req.body); // Crear una nueva instancia de Animal con los datos enviados
         const savedAnimal = await animal.save(); // Guardar el animal en la base de datos
-        respuesta 
+        res.status(200).json(savedAnimal); 
     } catch (err) { 
         res.status(400).json({ error: err.message }); // En caso de error, devolver mensaje de error 
         } 

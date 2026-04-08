@@ -1,4 +1,3 @@
-/*
 'use strict';
 const http = require('http');
 
@@ -7,10 +6,10 @@ const server = http.createServer(function(req, res){
     res.end('Hola Mundo');
 });
 server.listen(5000);
-*/
+
 const express = require('express')
 const app = express()
-const port = 5000
+const port = 3200
 
 app.get('/', (req, res) => {
     res.send('¡Hola Santiago!')
